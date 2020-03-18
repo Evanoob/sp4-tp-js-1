@@ -54,7 +54,7 @@ describe("dummyFunction - Should return the sum of two numbers", () => {
 
 /*
  ### Iteration 2 ###
-*/
+ */
 
 describe("sayHelloWorld - Should return a simple hello world message", () => {
   test("sayHelloWorld should be a function", () => {

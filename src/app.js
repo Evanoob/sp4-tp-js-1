@@ -56,34 +56,37 @@ exports.makeOpposite = function (b) {
   return !b;
 };
 
-exports.createACat = function (name, age, color, eyeColor, isCute) {
-  if ({
-      name: "Felix",
-      age: "eight",
-      color: "grey",
-      eyeColor: "green",
-      isCute: true
-    }) throw new TypeError("age must be a number");
-if ({
-      name: "Kitty",
-      age: 2,
-      color: "black",
-      eyeColor: "blue",
-      isCute: true
-    },
-{
-      name: "Felix",
-      age: 8,
-      color: "grey",
-      eyeColor: "green",
-      isCute: true
-    })
-    return name, age, color, eyeColor, isCute;
-  // if (isCute == "true") throw new TypeError ("isCute must be a boolean");
-  // return kitty, felix;
+
+exports.createACat = function (a, b, c, d, e) {
+  var cat = {
+    name: a,
+    age: b,
+    color: c,
+    eyeColor: d,
+    isCute: e
+  }
+  if (isNaN(b)) throw new TypeError("age must be a number");
+  if (typeof e !== "boolean") throw new TypeError("age must be a boolean");
+  return cat;
 };
+// exports.createACat = function (name, age, color, eyeColor, isCute) {
+// var cat = {
+//     name: "kitty",
+//     age: 2,
+//     color: "black",
+//     eyeColor: "blue",
+//     isCute: true
+//   }
+//   if (age !== isNaN) throw new TypeError("age must be a number");
+//   if (typeof isCute !== "boolean") throw new TypeError("age must be a boolean");
+//   return cat;
+// };
 
-exports.getTheWinner = function () {
-
-
+exports.getTheWinner = function (object1, object2) {
+  if (object1.score > object2.score) {
+    return `The winner is: ${object1.name}`
+  }
+  else {
+    return `The winner is: ${object2.name}`
+  }
 };

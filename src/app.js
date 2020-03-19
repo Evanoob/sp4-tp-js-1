@@ -60,7 +60,8 @@ exports.makeOpposite = function (b) {
 exports.createACat = function (a, b, c, d, e) {
   var cat = {
     name: a,
-    age: b,
+    age: Number (b),
+    //  Number force à écrire le str en Numb
     color: c,
     eyeColor: d,
     isCute: e
